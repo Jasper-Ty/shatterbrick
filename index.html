@@ -1,0 +1,85 @@
+<!doctype html>
+<html>
+
+<!-- I hate this whole HTML-CSS mumbo jumbo. This took me forever to figure out -->
+
+<head>
+	<meta charset = "utf-8"/>
+	<title>Shatterbrick	</title>
+	<style>
+		* {
+			padding: 0; margin: 0
+		}
+		body {
+			text-align: center; background-color: black;
+		}
+		p {
+			color: #DADACE;
+		}
+		#screenbg{
+			position:absolute;
+			z-index:1;
+		}
+		#topbarbg{
+			position:absolute;
+			z-index:1;
+		}
+		#game{
+			position:relative;
+			display:inline-block;
+		}
+		#topBar{
+			position:relative; 
+			width:800px; 
+			height:100px; 	
+		}
+		#screen{
+			position:relative;
+			width:800px; 
+			height:600px; 
+		}
+		canvas{
+			position:relative;
+			z-index:20;
+		}
+		#gameover{
+			position:absolute;
+			z-index:21;
+			visibility: hidden;
+		}
+		#welcome{
+			position:absolute;
+			z-index:2;
+			visibility: visible;
+		}
+		#victory{
+			position:absolute;
+			z-index:22;
+			visibility: hidden;
+		}
+		#music{
+			position:absolute;
+			visibility: hidden;
+		}
+	</style>
+	<script src = "./src/breakout.js" defer></script>
+</head>
+<body>
+	
+	<div id="game">
+		<audio id="music" controls loop src="./audio/newmoon.ogg"></audio>
+		<img class 'img' src="./img/logo.png" alt="Shatterbrick Logo"/>
+		<div id="topbar">
+			<img id="topbarbg" src="./img/topbar.png" alt="Top Bar"/>
+			<canvas id="topbarcanvas" width="800" height="100"></canvas>
+		</div>
+		<div id="screen">
+			<img id="screenbg" src="./img/background.png" alt="Game Background" />
+			<img id="welcome" src="./img/welcome.png" alt="Welcome Screen" />
+			<img id="victory" src="./img/victory.png" alt="Victory Screen" />
+			<img id="gameover" src="./img/gameover.png" alt="Game Over banner" />
+			<canvas id="gamecanvas" width="800" height="600"></canvas>
+		</div>
+	</div>
+</body>
+</html>
