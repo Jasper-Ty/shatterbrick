@@ -119,7 +119,7 @@ let paddleVel;
 let paddleX;
 
 function newGame(){
-	music.play(); 
+	//music.play(); 
 	welcomeScreen.style.visibility = "hidden";
 	gameOverBanner.style.visibility = "hidden";
 	victoryScreen.style.visibility = "hidden";
